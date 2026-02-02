@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val suhas = findViewById<ImageView>(R.id.imageView6)
-        val soundar = findViewById<ImageView>(R.id.imageView7)
-        val sethu = findViewById<ImageView>(R.id.imageView8)
+    val suhas = findViewById<ImageView>(R.id.imageView_suhas)
+    val soundar = findViewById<ImageView>(R.id.imageView_soundar)
+    val sethu = findViewById<ImageView>(R.id.imageView_sethu)
 
         suhas.setOnClickListener{
             val intent = Intent(this,SuhasActivity::class.java)
