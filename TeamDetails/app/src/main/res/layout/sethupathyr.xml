@@ -3,67 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SethuActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="47dp">
+    <ImageView
+        android:id="@+id/image_sethu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Photo of Sethupathy"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/sethupathyr"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9" />
 
-        <TextView
-            android:id="@+id/heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="Sethupathy R "
-            android:textColor="#FFFFFF"
-            android:textSize="34sp"
-            tools:layout_editor_absoluteX="74dp"
-            tools:layout_editor_absoluteY="64dp" />
+    <TextView
+        android:id="@+id/title_sethu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Sethupathy R"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/image_sethu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="283dp"
-            android:layout_height="463dp"
-            app:srcCompat="@drawable/sethupathyr"
-            tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="64dp" />
-
-        <TextView
-            android:id="@+id/heading3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="Vibe Coder"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="527dp" />
-
-        <TextView
-            android:id="@+id/heading8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="All Style , No substance"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="565dp" />
-
-        <TextView
-            android:id="@+id/heading7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:text="Professional Procastinator"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="607dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/sub_sethu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Vibe Coder • Professional Procrastinator • All Style, No Substance"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/title_sethu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,75 +5,176 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/heading1"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-medium"
         android:text="HumbleHackers"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="28dp" />
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="Suhas K S"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="205dp" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/heading1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="230dp"
-        android:layout_height="98dp"
-        android:fontFamily="monospace"
-        android:text="Soundar Arunachalam R M"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="410dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="192dp"
-        android:layout_height="91dp"
-        android:fontFamily="monospace"
-        android:text="Sethupathy R"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="623dp" />
+            <!-- Member 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="147dp"
-        android:layout_height="310dp"
-        app:srcCompat="@drawable/suhasks"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="66dp" />
+                <ImageView
+                    android:id="@+id/imageView_suhas"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="Suhas"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/suhasks"
+                    android:backgroundTintMode="src_over" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="150dp"
-        android:layout_height="291dp"
-        app:srcCompat="@drawable/rmsoundar"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="319dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:gravity="center_vertical">
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="145dp"
-        android:layout_height="327dp"
-        app:srcCompat="@drawable/sethupathyr"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="507dp" />
+                    <TextView
+                        android:id="@+id/text_suhas_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suhas K S"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/text_suhas_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leetcode Guardian"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Member 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView_soundar"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="Soundar"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/rmsoundar" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_soundar_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soundar Arunachalam R M"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/text_soundar_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Solves Leetcode in ASM"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Member 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:id="@+id/imageView_sethu"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="Sethupathy"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/sethupathyr" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_sethu_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sethupathy R"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/text_sethu_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vibe Coder"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
