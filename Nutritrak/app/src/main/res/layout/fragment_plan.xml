@@ -90,17 +90,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent">
 
-                <LinearLayout android:orientation="vertical" android:layout_marginEnd="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="16dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="91g" android:textStyle="bold"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Protein" android:textSize="12sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:orientation="vertical" android:layout_marginEnd="16dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="16dp">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="121g" android:textStyle="bold"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Carbs" android:textSize="12sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="63g" android:textStyle="bold"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fat" android:textSize="12sp"/>
                 </LinearLayout>

@@ -33,7 +33,6 @@
                 app:indicatorSize="12dp"
                 app:trackThickness="12dp"
                 app:indicatorInset="8dp"
-                app:indicatorDirection="clockwise"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

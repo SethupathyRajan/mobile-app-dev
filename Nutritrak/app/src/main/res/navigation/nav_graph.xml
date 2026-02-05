@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.nutritrak.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_home_to_add_meal"
+            app:destination="@id/addMealFragment" />
+
+        <action
+            android:id="@+id/action_home_to_scan_meal"
+            app:destination="@id/scanMealFragment" />
+
+        <action
+            android:id="@+id/action_home_to_settings"
+            app:destination="@id/settingsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="com.example.nutritrak.PlanFragment"
+        android:label="Plan"
+        tools:layout="@layout/fragment_plan" >
+
+        <action
+            android:id="@+id/action_plan_to_create_plan"
+            app:destination="@id/createPlanFragment" />
+
+        <action
+            android:id="@+id/action_plan_to_edit_plan"
+            app:destination="@id/editPlanFragment" />
+
+        <action
+            android:id="@+id/action_plan_to_settings"
+            app:destination="@id/settingsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addMealFragment"
+        android:name="com.example.nutritrak.AddMealFragment"
+        android:label="Add Meal"
+        tools:layout="@layout/fragment_add_meal" />
+
+    <fragment
+        android:id="@+id/scanMealFragment"
+        android:name="com.example.nutritrak.ScanMealFragment"
+        android:label="Scan Meal"
+        tools:layout="@layout/fragment_scan_meal" />
+
+    <fragment
+        android:id="@+id/createPlanFragment"
+        android:name="com.example.nutritrak.CreatePlanFragment"
+        android:label="Create Plan"
+        tools:layout="@layout/fragment_create_plan" />
+
+    <fragment
+        android:id="@+id/editPlanFragment"
+        android:name="com.example.nutritrak.EditPlanFragment"
+        android:label="Edit Plan"
+        tools:layout="@layout/fragment_edit_plan" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.nutritrak.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
