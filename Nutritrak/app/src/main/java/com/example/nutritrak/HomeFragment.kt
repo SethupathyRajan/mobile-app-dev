@@ -9,8 +9,12 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.button.MaterialButton
+import com.example.nutritrak.utils.NotificationHelper
 
 class HomeFragment : Fragment() {
+
+    private lateinit var btnShowNotification: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +26,17 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        NotificationHelper.createNotificationChannel(requireContext())
+
+        btnShowNotification = view.findViewById(R.id.btn_show_notification)
+        btnShowNotification.setOnClickListener {
+            NotificationHelper.showCalorieGoalNotification(requireContext(), 750)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

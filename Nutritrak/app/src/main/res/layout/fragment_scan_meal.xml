@@ -48,7 +48,14 @@
             android:orientation="vertical"
             android:background="?attr/colorSurfaceVariant">
 
+            <ProgressBar
+                android:id="@+id/progress_scanning"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:visibility="gone" />
+
             <ImageView
+                android:id="@+id/iv_camera"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:src="@android:drawable/ic_menu_camera"
